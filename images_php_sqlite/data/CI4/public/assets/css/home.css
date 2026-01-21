@@ -1,0 +1,266 @@
+.video-wrapper {
+    width: 330px;
+    height: 570px;
+    margin-left: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#mukbang-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tiktok-sidebar {
+    position: fixed;
+    right: 0;
+    top: 100px;
+    width: 350px;
+    padding: 10px 0;
+    background-color: #bb946f;
+    overflow: hidden;
+    height: 700px;
+    z-index: 9;
+    transition: right 0.3s ease-in-out;
+    border-radius: 1.5rem 0px 0px 1.5rem;
+    box-shadow:
+    -10px 16px 24px rgba(0, 0, 0, 0.5),
+    -22px 32px 50px rgba(0, 0, 0, 0.35);
+    user-select: none;
+}
+
+.tiktok-sidebar.closed {
+    right: -350px;
+}
+
+.tiktok-sidebar h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.tiktok-sidebar video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 575px;
+    margin: 0 auto;
+    
+}
+
+.sidebar-toggle-btn {
+    position: absolute;
+    border: none;
+    background-color: #bb946f;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px 10px 3px 10px;
+    height: 40px;
+    line-height: 1;
+    z-index: 1;
+    
+}
+
+#close-sidebar-btn {
+    top: 0;
+    left: 315px;
+    width: 35px;
+    border-radius: 5px 0 0 5px;
+    z-index: 10;
+    color: #003366;
+    background-color: #00224400;
+    transition: transform 0.5s ease-in;
+}
+
+#close-sidebar-btn:hover {
+    transform: rotate(360deg);
+}
+
+
+#open-sidebar-btn {
+    background-color: #003366;
+    top: 100px;
+    right: 0;
+    border-radius: 5px 0 0 5px;
+    display: none;
+    transition: transform 0.1s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+#open-sidebar-btn:hover {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+
+.video-controls {
+    display: flex;
+    margin-top: 12px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.video-controls button {
+    background-color: #003366;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 45%;
+    transition: 0.2s ease-in-out;
+}
+
+.video-controls button:hover {
+    background-color: #002244;
+    transform: translateY(-5px);
+        box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(0, 0, 0, 0.8);
+
+}
+
+
+
+@keyframes openCurtainLeft {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes openCurtainRight {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(100%); }
+}
+
+.curtain-opener {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 51%; 
+    background-color: #3d1212; 
+    z-index: 9999; 
+    pointer-events: none; 
+    will-change: transform; 
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.opener-left {
+    left: 0;
+    animation: openCurtainLeft 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    animation-delay: 0.1s;
+}
+
+.opener-right {
+    right: 0;
+    animation: openCurtainRight 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    animation-delay: 0.1s;
+}
+
+
+
+@media (max-width: 1299px) {
+    .tiktok-sidebar, #open-sidebar-btn,.sidebar-toggle-btn {
+        display: none !important;
+    }
+}
+
+@media (max-height: 850px) {
+    .tiktok-sidebar, #open-sidebar-btn,.sidebar-toggle-btn {
+        display: none !important;
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 25px;
+    margin-top: 30px;
+    width: 100%;
+    align-items: start;
+}
+
+.affiche-page {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: 70vh;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 10px 15px;
+    height: 3rem;
+    overflow: hidden;
+}
+
+.product-card p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #bb946f;
+    margin-bottom: 20px;
+}
+
+.btn-details {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 12px 0;
+    background: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-details:hover {
+    background: #002244;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    
+    .affiche-page h1 {
+        font-size: 1.5rem;
+    }
+}

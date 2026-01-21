@@ -1,0 +1,22 @@
+.star-rating {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 30px; /* Taille des étoiles */
+    cursor: pointer;
+}
+
+.star {
+    color: #ccc; /* Étoile vide (grise) */
+    transition: color 0.2s ease;
+}
+
+/* Étoiles colorées (dorées) */
+.star.active {
+    color: #742222;
+}
+
+/* Effet de survol pour plus d'interactivité */
+.star:hover {
+    transform: scale(1.2);
+}

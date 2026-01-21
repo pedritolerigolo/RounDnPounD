@@ -1,0 +1,90 @@
+.profil-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: auto;
+    padding: 40px 2vw;
+    user-select: none;
+}
+
+.connexion-window-admin {
+    width: 100%;
+    max-width: 600px;
+    background-color: #bb946f;
+    color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.connexion-window-admin h1 {
+    font-size: 2.5rem;
+    font-family: "Rubik Scribble", system-ui;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.connexion-window-admin form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.connexion-window-admin label {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.connexion-window-admin input[type="text"],
+.connexion-window-admin input[type="number"],
+.connexion-window-admin textarea,
+.connexion-window-admin select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.connexion-window-admin input:focus, 
+.connexion-window-admin textarea:focus, 
+.connexion-window-admin select:focus {
+    box-shadow: 0 0 0 3px #003366;
+}
+
+#add-ingredient-btn {
+    background: rgba(0, 51, 102, 0.2);
+    border: 2px dashed #003366;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#add-ingredient-btn:hover {
+    background: rgba(0, 51, 102, 0.4);
+}
+
+@media screen and (max-width: 650px) {
+    .profil-page {
+        padding: 2vh 0;
+    }
+    .connexion-window-admin {
+        border-radius: 0;
+        max-width: 100%;
+        padding: 20px;
+    }
+}

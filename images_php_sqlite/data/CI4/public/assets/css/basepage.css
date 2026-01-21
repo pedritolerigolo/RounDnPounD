@@ -1,0 +1,125 @@
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    z-index: 10;
+    user-select: none;
+}
+
+.welcome-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px 60px;
+    border-radius: 40px;
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.178);
+    text-align: center;
+    max-width: 750px;
+    width: 85%;
+    max-height: 450px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: filter 1s ease, opacity 1.5s ease, transform 1.5s ease;
+}
+
+.gif {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 25px;
+    background-color: #e2e2e200;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 { color: #003362; margin: 0 0 10px 0; font-size: 2.2rem; }
+h2 { color: #003362; margin: 0; line-height: 1.6; }
+
+.enter-btn {
+    text-decoration: none;
+    background-color: #003362;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: auto;
+}
+
+body:has(.enter-btn:hover) .header, 
+body:has(.enter-btn:hover) .background-layer {
+    filter: blur(10px);
+    opacity: 0.5;
+}
+
+body:has(.enter-btn:hover) .welcome-container {
+    filter: blur(10px);
+    opacity: 0.3;
+    transform: scale(0.9);
+}
+
+.enter-btn {
+    position: relative;
+    z-index: 999;
+    transition: all 1s ease-in-out;
+}
+
+.enter-btn:hover {
+    transform: scale(1.25);
+    filter: blur(0) !important; 
+    opacity: 1 !important;
+}
+
+.curtain {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 51%; 
+    background-color: #3d1212; 
+    z-index: 10000;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    pointer-events: none;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.panel-left {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.panel-right {
+    right: 0;
+    transform: translateX(100%);
+}
+
+body.curtain-closed .panel-left {
+    transform: translateX(0);
+}
+
+body.curtain-closed .panel-right {
+    transform: translateX(0);
+}
+
+canvas {
+    pointer-events: none;
+    z-index: 99999 !important;
+}

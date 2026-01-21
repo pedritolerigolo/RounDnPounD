@@ -1,0 +1,245 @@
+.profil-page {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+}
+
+.connexion-window {
+    width: 40%;
+    height: auto;
+    max-width: 90%;
+    margin: 0;
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow: visible;
+    background-color: #bb946f;
+    color: #fff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px #ffffff2f;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rubik-scribble-regular {
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.connexion-window h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.1;
+    text-align: center;
+    font-family: "Rubik Scribble", system-ui;
+}
+
+.connexion-window form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.connexion-window label {
+    margin-bottom: 8px;
+    font-weight: 1000;
+    font-size: 1.4rem;
+    display: block;
+}
+
+.connexion-window input[type="text"],
+.connexion-window input[type="password"],
+.connexion-window input[type="email"],
+.connexion-window input[type="date"] 
+{
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    user-select: text;
+}
+
+.connexion-window input[type="text"]:hover,
+.connexion-window input[type="password"]:hover,
+.connexion-window input[type="email"]:hover,
+.connexion-window input[type="date"]:hover
+{
+    box-shadow: 0 0 0 3px #003366;
+}
+.connexion-window input[type="text"]:focus,
+.connexion-window input[type="password"]:focus,
+.connexion-window input[type="email"]:focus,
+.connexion-window input[type="date"]:focus
+{
+    box-shadow: 0 0 0 3px #003366;
+}
+
+.connexion-window button[type="submit"], .btn{
+    padding: 12px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.connexion-window button[type="submit"]:hover, .btn:hover {
+    background-color: #002244;
+}
+
+.connexion-window p {
+    margin-top: 25px;
+    font-size: 1rem;
+}
+
+.connexion-window p a {
+    color: #003366;
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 10px;
+    transition: text-decoration 0.3s ease;
+}
+
+.connexion-window p a:hover {
+    text-decoration: underline;
+}
+
+.connexion-window .forgot-password {
+    color: #003366;
+    font-size: 0.9rem; /* Un peu plus petit */
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.connexion-window .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.terms-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.terms-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.label-inline {
+    margin-bottom: 0 !important;
+    cursor: pointer;
+}
+
+.terms-container a {
+    color: #ae2492;
+    text-decoration: underline;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px;
+    color: #333;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+}
+
+.terms-text {
+    max-height: 300px;
+    overflow-y: auto;
+    margin: 20px 0;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover { 
+    color: #742222;
+}
+
+@media screen and (max-width: 650px) {
+
+    .connexion-window {
+        position: relative;
+        top: -50px;
+        left: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        max-height: none;
+        overflow-y: visible;
+        margin: 5px auto 20px auto; 
+        padding: 30px 20px;
+        border-radius: 0; 
+        user-select: unset; 
+        -webkit-user-select: unset;
+        -moz-user-select: unset;
+        -ms-user-select: unset;
+    }
+
+    .connexion-window h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .connexion-window p {
+        margin-top: 15px;
+    }
+}

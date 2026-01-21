@@ -1,0 +1,131 @@
+.connexion-window .form-control {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+p {
+    margin-top: none;
+}
+.connexion-window .form-control::placeholder {
+    color: #aaa;
+}
+
+div.info-recap {
+    width: 50%;
+    height: 50%;
+}
+
+.connexion-window .form-control {
+       width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+    background: #003366;
+    font-weight: bold;
+    color: #ffffff;
+    transition: 0.6s ease;
+}
+
+.connexion-window .form-control:hover {
+    background: rgba(255, 255, 255, 0.861);
+    color: #000;
+    box-shadow: 0 8px 20px rgba(2, 67, 152, 0.66);
+}
+
+
+
+.connexion-window .adresse-actions .btn-commande{
+    
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-weight: bold;
+    width: 30%;
+    height: 5%;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: 0.3s ease box-shadow 0.3s ease;
+}
+
+.connexion-window .adresse-actions .btn-commande:hover {
+    background: #ffffff;
+    color: #000;
+}
+
+.connexion-window .btn-ajouter-adresses {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 6px;
+    padding: 10px;
+    width: 35%;
+    height: 55px;
+    margin-top: 10px;
+    padding: 12px 18px;
+    text-decoration: none;
+
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.connexion-window .adresse-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.connexion-window .adresse-actions .btn-commande,
+.connexion-window .adresse-actions .btn-ajouter-adresse {
+    flex: 1; 
+    text-align: center;
+
+    padding: 14px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.connexion-window .btn-ajouter-adresses:hover {
+    background: #ffffff;
+    color: #000;
+}
+
+
+
+.connexion-window .info-recap {
+    margin: 20px 0;
+    padding: 15px 20px;
+
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+
+    transition: 0.3s ease, box-shadow 0.3s ease;
+}
+.connexion-window .info-recap:hover {
+    background: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 600px) {
+    .connexion-window {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
